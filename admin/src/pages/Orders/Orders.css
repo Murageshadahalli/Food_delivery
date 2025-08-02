@@ -1,0 +1,288 @@
+.order {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.order h3 {
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.order-item {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid #3498db;
+}
+
+.order-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.order-main-content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+
+.order-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 80px;
+}
+
+.order-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #ecf0f1;
+  padding: 8px;
+}
+
+.order-number {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7f8c8d;
+  background: #ecf0f1;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.order-details {
+  flex: 1;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.order-header h4 {
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.total-items {
+  background: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.order-item-food {
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.4;
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid #3498db;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-item-address,
+.order-item-phone,
+.order-item-amount {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-item-amount {
+  font-weight: 600;
+  color: #27ae60;
+  font-size: 16px;
+}
+
+.order-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: #f8f9fa;
+  border-left: 1px solid #ecf0f1;
+  min-width: 200px;
+}
+
+.order-item-status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-item-status label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.status-select {
+  padding: 10px 12px;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.status-select:hover {
+  border-color: #3498db;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.status-select option {
+  padding: 8px;
+  font-weight: 500;
+}
+
+/* Status-specific styling */
+.status-select option[value="Food Processing"] {
+  color: #f39c12;
+}
+
+.status-select option[value="Out for Delivery"] {
+  color: #3498db;
+}
+
+.status-select option[value="Delivered"] {
+  color: #27ae60;
+}
+
+.order-date {
+  text-align: center;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ecf0f1;
+}
+
+.order-date span {
+  font-size: 12px;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+/* Status badges */
+.status-select {
+  position: relative;
+}
+
+.status-select[data-status="Food Processing"] {
+  border-color: #f39c12;
+  color: #f39c12;
+}
+
+.status-select[data-status="Out for Delivery"] {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.status-select[data-status="Delivered"] {
+  border-color: #27ae60;
+  color: #27ae60;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .order-item {
+    flex-direction: column;
+  }
+  
+  .order-main-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .order-icon {
+    flex-direction: row;
+    align-self: center;
+    margin-bottom: 15px;
+  }
+  
+  .order-options {
+    border-left: none;
+    border-top: 1px solid #ecf0f1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: auto;
+  }
+  
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .order-info {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order {
+    padding: 10px;
+  }
+  
+  .order-main-content {
+    padding: 15px;
+  }
+  
+  .order-options {
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .order-item-food {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
